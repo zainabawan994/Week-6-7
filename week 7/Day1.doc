@@ -1,0 +1,97 @@
+What is React Router?
+
+React Router is a routing library for React that allows us to create multiple pages inside a Single Page Application (SPA). Instead of refreshing the browser when moving between pages, React Router dynamically updates the component that matches the current URL.
+
+🔹 Main Concepts in React Router
+
+BrowserRouter
+
+The main wrapper that enables routing in your app.
+
+It keeps track of the browser’s URL and decides which page to show.
+
+Routes & Route
+
+A Route maps a URL path (like /home or /about) to a specific component (a page).
+
+Routes is like a container that holds all your route definitions.
+
+Link
+
+Used to navigate between pages without reloading the app.
+
+Works like an <a> tag, but does not refresh the browser.
+
+NavLink
+
+Same as Link but with an extra feature: it can apply styles when the link is active (for example, highlighting the current menu item).
+
+useNavigate()
+
+A hook that lets you navigate to another page using JavaScript functions.
+
+Useful when you want to redirect after a button click or after submitting a form.
+
+useParams()
+
+Used to get dynamic values from the URL.
+
+Example: in /user/101, you can extract 101 as a parameter.
+
+useLocation()
+
+Provides information about the current URL (like path, query string, etc.).
+
+Nested Routes
+
+Lets you create routes inside other routes.
+
+For example, a "Dashboard" page can have sub-routes like /dashboard/profile and /dashboard/settings.
+
+404 Page (Not Found Route)
+
+A special route to handle cases when the user enters an undefined URL.
+
+Instead of showing a blank screen, you can display a "Page Not Found" message.
+
+🔹 How Navigation Works in React Router
+
+You wrap your app inside BrowserRouter.
+
+Inside it, you define Routes.
+
+Each Route matches a URL path to a page component.
+
+To move between pages:
+
+Use Link/NavLink → for normal navigation.
+
+Use useNavigate() → for navigation in functions (like redirects).
+
+If the URL has variables (like /product/10), you use useParams() to read those.
+
+You can check the current page with useLocation().
+
+For undefined paths, use a * route to show a 404 page.
+
+🔹 Example Navigation Flow (Without Code)
+
+User clicks on "About" in the menu.
+
+React Router intercepts the click.
+
+The URL changes to /about without refreshing the browser.
+
+React Router checks which Route matches /about.
+
+It loads the About Page Component.
+
+🔹 Why React Router is Important?
+
+Makes React apps feel like real multi-page websites.
+
+Improves user experience (no reloads).
+
+Allows complex apps with nested routes, parameters, and programmatic redirects.
+
+Essential for building dashboards, e-commerce sites, portfolios, blogs, etc.
