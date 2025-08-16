@@ -1,0 +1,31 @@
+Conditional Styling in React
+
+Conditional styling means applying different styles to a component based on certain conditions. For example, you may want a button to look green when it is active and grey when it is disabled. In React, conditional styling is typically managed through JavaScript logic. Instead of writing fixed styles, you decide dynamically what styles should apply based on props, state, or context. This can be done by using ternary operators, logical conditions, or conditional class names. Conditional styling is very useful because user interfaces often need to change appearance depending on the application’s state (like highlighting the current navigation link, showing errors in red, or hiding elements).
+
+Component Libraries (Tailwind, Bootstrap)
+
+Component libraries provide pre-built styles and UI elements that you can use directly instead of writing CSS from scratch. This saves time and ensures consistency in design. Two popular libraries in React are Bootstrap and Tailwind CSS.
+
+Bootstrap: A traditional CSS framework that comes with a set of pre-designed components such as buttons, forms, modals, and navigation bars. It is class-based, meaning you apply Bootstrap’s predefined classes to your elements to style them. It follows a more fixed design pattern, which is easy to use but sometimes less flexible when customizing.
+
+Tailwind CSS: A utility-first CSS framework where you style elements by combining small utility classes (for example, margin, padding, colors, borders). Unlike Bootstrap, Tailwind does not provide ready-made components but instead gives you building blocks to create your own designs. It is highly customizable and often preferred in modern React projects because it integrates well with component-based design.
+
+Using these libraries reduces the effort needed to design from scratch and makes it faster to build professional-looking applications. Tailwind is popular for flexibility, while Bootstrap is great for quick setups and standard UI patterns.
+
+Context API Basics
+
+The Context API in React is a way to manage and share state across multiple components without passing props manually through each level. Normally, when you want to send data from a parent component to deeply nested child components, you have to pass props through every level, even if some components in the middle do not need that data. This is called “prop drilling,” and it can make code hard to manage.
+
+The Context API solves this problem by creating a central place (a context) where data can be stored and accessed by any component that needs it. You create a context, wrap your component tree with a provider, and then any component inside can consume the context data directly. This is especially useful for things like authentication state, theme preferences (light or dark mode), or user settings.
+
+While the Context API is powerful, it should be used wisely. It is best for global states that many parts of the app need. For very complex state management, developers often use libraries like Redux or Zustand, but Context API is enough for many small and medium projects.
+
+Summary
+
+Conditional Styling: Apply styles dynamically based on conditions such as state or props.
+
+Component Libraries: Use frameworks like Bootstrap (pre-made components, easy setup) or Tailwind CSS (utility-first, highly customizable) to style applications quickly.
+
+Context API: Manage and share state globally across components, avoiding prop drilling and making data sharing cleaner and easier.
+
+Would you like me to prepare a mini practical project i
